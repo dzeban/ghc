@@ -31,7 +31,7 @@ void checkGlobalTSOList ( rtsBool checkTSOs );
 void checkStaticObjects ( StgClosure* static_objects );
 void checkStackChunk    ( StgPtr sp, StgPtr stack_end );
 StgOffset checkStackFrame ( StgPtr sp );
-StgOffset checkClosure  ( StgClosure* p );
+StgOffset checkClosure  ( const StgClosure* p );
 
 void checkRunQueue      (Capability *cap);
 
@@ -42,5 +42,5 @@ void checkBQ (StgTSO *bqe, StgClosure *closure);
 #include "EndPrivate.h"
 
 #endif /* DEBUG */
- 
+
 #endif /* SANITY_H */
